@@ -1,10 +1,12 @@
 # Approachrate Calculator
 
-ARC is a CLI-tool for calculating hit object visibility for osu! beatmaps.
+ARC is a CLI-tool for calculating hitobject visibility for [osu!](https://github.com/ppy/osu) beatmaps.
+
+Download the Windows executeable [here](https://pennek.s-ul.eu/5DQKeBFe.zip). Feel free to compile the program for other operating systems yourself.
 
 ## Documentation
 
-ARC takes three arguments and calculates circle visibility, using the following formulas (which can be found on [osu!wiki](https://github.com/ppy/osu-wiki/blob/master/meta/unused/difficulty-settings.md)):
+The program calculates visibility using the following formulas (which can be found on [osu!wiki](https://github.com/ppy/osu-wiki/blob/master/meta/unused/difficulty-settings.md)):
 
 ```yaml
                                         X = perfect hit
@@ -27,7 +29,7 @@ The amount of time it takes for hitobjects to fade in is also reliant on approac
 
 ## Parameters
 
-ARC needs all three arguments with the correct input types to calculate visibility.
+All three parameters need to be entered correctly to calculate visibility.
 
 Arguments | Input types
 :-- | ---
@@ -37,6 +39,6 @@ Arguments | Input types
 
 ## Output
 
-After execution, ARC will output something similar to this:
+ARC will output something like this after execution:
 
 ![Screenshot](https://i.imgur.com/r3S23RL.jpg " ")
