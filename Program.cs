@@ -12,18 +12,23 @@ namespace approachrateCalculator
 
         static void Main(string[] args)
         {
-          if(args[0].ToLower() == "credits"){
-            Console.WriteLine("Program written by Pennek, u/3723742");
+          try {
+            if(args[0].ToLower() == "credits"){
+              Console.WriteLine("Program written by Pennek, u/3723742");
+              System.Environment.Exit(0);
+            }
+          } catch(IndexOutOfRangeException){
+            Console.WriteLine("Too few arguments given. Arguments must include: approach rate, bpm and snapdivisor.");
             System.Environment.Exit(0);
           }
           try{
             ar = Convert.ToDouble(args[0]);
             bpm = Convert.ToDouble(args[1]);
             snapdivisor = Convert.ToInt32(args[2]);
-          }catch(IndexOutOfRangeException){
+          } catch(IndexOutOfRangeException){
             Console.WriteLine("Too few arguments given. Arguments must include: approach rate, bpm and snapdivisor.");
             System.Environment.Exit(0);
-          }catch(System.FormatException){
+          } catch(System.FormatException){
             Console.WriteLine("Snapdivisor must be a whole number.");
             System.Environment.Exit(0);
           }
@@ -73,7 +78,7 @@ namespace approachrateCalculator
     // Create correct amount of Circles with correct startTimes from bpm 
       private static List<Circle> CreateCircles(int endTime, int increment, int fadeinTime, int preempt){
         var objects = new List<Circle>();
-        for(int currentTime = 0; currentTime <= endTime; currentTime+=increment){
+        for(int currentTime = 0; currentTime < endTime; currentTime+=increment){
           Circle x = new Circle(currentTime, fadeinTime, preempt);
           objects.Add(x);
         }
@@ -85,7 +90,7 @@ namespace approachrateCalculator
         Console.WriteLine("Preempt: " + Convert.ToString(getPreempt(ar)) + "ms");
         Console.WriteLine("Fadein: " + Convert.ToString(getFadein(ar)) + "ms");
         Console.WriteLine("-----------------------------------");
-        Console.WriteLine("In total there are " + Convert.ToString(circles.Count) + " circles visible at once:");
+        Console.WriteLine("In total there are " + Convert.ToString(circles.Count) + " circle(s) visible at once:");
         for(int i=0; i < circles.Count; i++){
           Console.WriteLine("#" + Convert.ToString(i+1) + " at " + circles[i].getObjectTime() + "ms is visible for " + circles[i].getVisibilityTime() + "ms (" + circles[i].getVisibilityPercentage() + "% visible)");
           // #1 at 0ms is visible for 15ms (87.5% visible)
