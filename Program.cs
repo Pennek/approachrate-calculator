@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace densityCalculator
+namespace approachrateCalculator
 {
     class Program
     {
@@ -12,7 +12,7 @@ namespace densityCalculator
 
         static void Main(string[] args)
         {
-          if(args[0].ToLower() == "credit"){
+          if(args[0].ToLower() == "credits"){
             Console.WriteLine("Program written by Pennek, u/3723742");
             System.Environment.Exit(0);
           }
