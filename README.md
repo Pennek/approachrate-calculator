@@ -1,8 +1,8 @@
-# Approachrate Calculator
+# Visibility Calculator
 
-ARC is a CLI-tool for calculating hitobject visibility for [osu!](https://github.com/ppy/osu) beatmaps.
+VIS is a CLI-tool for calculating hitobject visibility for [osu!](https://github.com/ppy/osu) beatmaps.
 
-Download the Windows executeable [here](https://pennek.s-ul.eu/5DQKeBFe.zip). Feel free to compile the program for other operating systems yourself.
+Download the Windows executeable [here](https://pennek.s-ul.eu/L1MOTO1R.zip). Feel free to compile the program for other operating systems yourself.
 
 ## Documentation
 
@@ -39,6 +39,6 @@ Arguments | Input types
 
 ## Output
 
-ARC will output something like this after execution:
+VIS will output something like this after execution:
 
 ![Screenshot](https://i.imgur.com/r3S23RL.jpg " ")
