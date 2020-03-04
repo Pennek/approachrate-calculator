@@ -12,6 +12,10 @@ namespace densityCalculator
 
         static void Main(string[] args)
         {
+          if(args[0].ToLower() == "credit"){
+            Console.WriteLine("Program written by Pennek, u/3723742");
+            System.Environment.Exit(0);
+          }
           try{
             ar = Convert.ToDouble(args[0]);
             bpm = Convert.ToDouble(args[1]);
